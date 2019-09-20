@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+       MYSQL_DATABASE: 'slack_bot1'
+       MYSQL_USER: 'root'
+       MYSQL_PASSWORD: ''
+       MYSQL_ROOT_PASSWORD: '1q2w3e4r'
+    volumes:
+      - /srv/docker/sockets/mariadb:/var/run/mysqld
+  redis:
+    image: "redis:alpine"
+    volumes:
+      - /opt/slack_bot/redis_data:/var/lib/redis
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:9001
+    ports:
+      - "9001:9001"
+    depends_on:
+      - db
