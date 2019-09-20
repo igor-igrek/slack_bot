@@ -13,4 +13,3 @@ RUN set -e; \
 RUN pip install -r requirements.txt
 ADD . /home/slack_bot/
 EXPOSE 9001
-CMD ["python", "manage.py",  "runserver", "0.0.0.0:9001"]
