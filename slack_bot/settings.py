@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
-import environ
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,7 +25,7 @@ SECRET_KEY = '$xd71f0o%e@3bkjv!$%6^s8q$jx%2^(y272dx&9nzv4y&y80ak'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
@@ -84,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'slack_bot',
         'USER': 'root',
-        'PASSWORD': '1q2w3e4r',
+        'PASSWORD': '',
         'HOST': '',
         'PORT': '3306',
     }
