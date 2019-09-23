@@ -25,7 +25,7 @@ SECRET_KEY = '$xd71f0o%e@3bkjv!$%6^s8q$jx%2^(y272dx&9nzv4y&y80ak'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'slack_bot',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '1q2w3e4r',
         'HOST': '',
         'PORT': '3306',
     }
