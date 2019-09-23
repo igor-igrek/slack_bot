@@ -10,8 +10,11 @@
 
 1. `mkdir -p /tmp/slack_bot/mysqld && sudo chmod -R 777 /tmp/slack_bot/mysqld`
 2. `sudo docker-compose up -d --no-deps --build --force-recreat`
-3. `sudo docker-compose run web python3 manage.py migrate && sudo docker-compose up`
+3. `sudo docker-compose run web python3 manage.py migrate`
+4. create a `superuser` (admin) - `sudo docker-compose run web python manage.py createsuperuser`
 4. `sudo docker-compose up`
+
+Site included at http://0.0.0.0:9001 (f.e. http://0.0.0.0:9001/admin/)
 
 ## Run tests
 
