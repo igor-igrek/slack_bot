@@ -8,7 +8,10 @@
 
 # Run application
 
-`docker-compose up`
+1. `mkdir -p /tmp/slack_bot/mysqld && sudo chmod -R 777 /tmp/slack_bot/mysqld`
+2. `sudo docker-compose up -d --no-deps --build --force-recreat`
+3. `sudo docker-compose run web python3 manage.py migrate && sudo docker-compose up`
+4. `sudo docker-compose up`
 
 ## Run tests
 
