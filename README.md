@@ -5,6 +5,7 @@
 4. On the `Events Subscriptions` page enter link of your website + `/events/`, pick next events:
 `im_created`, `im_history_changed`, `message.channels`, `message.groups`, `message.im` to `Workspace Events` and `im_created`, `message.channels`, `message.im` to `Bot Events`.
 5. On the `OAuth & Permissions` page to a `Scopes` add `files.read`
+6. On the `Incoming Webhooks` page create `Add New Webhook to Workspace`
 
 # Run application
 
