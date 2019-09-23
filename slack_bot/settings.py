@@ -27,7 +27,7 @@ SECRET_KEY = '$xd71f0o%e@3bkjv!$%6^s8q$jx%2^(y272dx&9nzv4y&y80ak'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'slack_bot.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'slack_bot1',
+        'NAME': 'slack_bot',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '1q2w3e4r',
         'HOST': '',
         'PORT': '3306',
     }
@@ -129,7 +129,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = '6379'
@@ -137,15 +138,5 @@ BROKER_URL = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
 BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
 CELERY_RESULT_BACKEND = 'redis://' + REDIS_HOST + ':' + REDIS_PORT + '/0'
 
-# import environ
-#
-# PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-# BASE_DIR = os.path.dirname(PROJECT_DIR)
-
-# env = environ.Env(
-#     SLACK_API_TOKEN=str,
-# )
-
-# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SLACK_API_TOKEN = os.environ.get('SLACK_API_TOKEN')
